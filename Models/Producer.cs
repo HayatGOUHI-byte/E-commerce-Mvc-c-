@@ -3,5 +3,6 @@
     public class Producer
     {
         public string FullName{ get; set; }
+        public string PictureProfileUrl { get; set; }
     }
 }
