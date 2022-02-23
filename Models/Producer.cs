@@ -2,5 +2,6 @@
 {
     public class Producer
     {
+        public string FullName{ get; set; }
     }
 }
