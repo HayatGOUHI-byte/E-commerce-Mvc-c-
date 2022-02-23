@@ -9,5 +9,7 @@ namespace E_commerce_Mvc_app.Models
         public string FullName{ get; set; }
         public string PictureProfileUrl { get; set; }
         public string Bio { get; set; }
+
+        public list<Movie> movies { get; set; }
     }
 }
