@@ -29,7 +29,7 @@ namespace Rocky
         public void ConfigureServices(IServiceCollection services)
         {
             //DbContextConfiguration
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllersWithViews();
         }
 
