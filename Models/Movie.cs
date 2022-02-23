@@ -1,4 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using  E_commerce_Mvc_app.Data;
+
+
 
 namespace E_commerce_Mvc_app.Models
 {
