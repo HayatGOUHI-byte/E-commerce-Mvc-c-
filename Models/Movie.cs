@@ -19,7 +19,7 @@ namespace E_commerce_Mvc_app.Models
 
         public MovieCategory MovieCategory { get; set; }
 
-        public List<Actor_Movie> Actor_Movie { get; set; }
+        public List<Actor_Movie> Actors_Movies { get; set; }
 
 
         public int CinemaId { get; set; }

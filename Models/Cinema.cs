@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace E_commerce_Mvc_app.Models
 {
@@ -9,6 +10,6 @@ namespace E_commerce_Mvc_app.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public  <Movie> movies { get; set; }
+        public  List<Movie> movies { get; set; }
     }
 }
