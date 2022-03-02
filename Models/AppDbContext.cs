@@ -29,7 +29,7 @@ namespace E_commerce_Mvc_app.Data
             modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(am => am.Actors_Movies).HasForeignKey
                 (m => m.ActorId);
             base.OnModelCreating(modelBuilder);
-            throw new UnintentionalCodeFirstException();
+            
         }
 
         public virtual DbSet<Actor> Actors{get; set;}
