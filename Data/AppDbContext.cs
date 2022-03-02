@@ -1,6 +1,7 @@
 ﻿using E_commerce_Mvc_app.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -28,15 +29,18 @@ namespace E_commerce_Mvc_app.Data
             modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(am => am.Actors_Movies).HasForeignKey
                 (m => m.ActorId);
             base.OnModelCreating(modelBuilder);
+            throw new UnintentionalCodeFirstException();
         }
 
-        public DbSet<Actor> Actors{get; set;}
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Actor_Movie> Actors_Movies { get; set; }
-        public DbSet<Cinema> Cinemas { get; set; }
+        public virtual DbSet<Actor> Actors{get; set;}
+        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Actor_Movie> Actors_Movies { get; set; }
+        public virtual DbSet<Cinema> Cinemas { get; set; }
 
-        public DbSet<Producer> Producers { get; set; }
+        public virtual DbSet<Producer> Producers { get; set; }
 
     }
+
+
     }
 

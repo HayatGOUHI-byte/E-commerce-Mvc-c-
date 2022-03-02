@@ -19,15 +19,21 @@ namespace E_commerce_Mvc_app.Models
 
         public MovieCategory MovieCategory { get; set; }
 
+
+
+        //relationships
         public List<Actor_Movie> Actors_Movies { get; set; }
 
 
         public int CinemaId { get; set; }
         [ForeignKey("CinemaId")]
+        //Cinema
         public Cinema Cinema { get; set; }
+
 
         public int ProducerId { get; set; }
         [ForeignKey("ProducerId")]
+        //Producer
         public Producer Producer { get; set; }
     }
 }
