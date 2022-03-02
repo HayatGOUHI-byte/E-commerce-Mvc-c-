@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using E_commerce_Mvc_app.Data;
-
+using E_commerce_Mvc_app.Models;
 
 namespace Rocky
 {
@@ -29,7 +29,7 @@ namespace Rocky
         public void ConfigureServices(IServiceCollection services)
         {
             //DbContextConfiguration
-            services.AddDbContext<AppDbContext>
+            services.AddDbContext<CompanyContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllersWithViews();
         }
