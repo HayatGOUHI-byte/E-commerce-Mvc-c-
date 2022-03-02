@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_commerce_Mvc_app.Migrations
 {
     [DbContext(typeof(CompanyContext))]
-    [Migration("20220302144552_Migration1")]
+    [Migration("20220302150015_Migration1")]
     partial class Migration1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
