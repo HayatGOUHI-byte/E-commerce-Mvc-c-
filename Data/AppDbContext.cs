@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using DB_Context.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace E_commerce_Mvc_app.Models
+/************ A DbContext translator between c# language and SQL language ****************/
+
+namespace E_commerce_Mvc_app.Models /*folder hierarchy */
 {
-    public class CompanyContext : DbContext
+    public class CompanyContext : DbContext /*abstract Class on est bien d'accord*/
     {
         public DbSet<Department> Department { get; set; }
         public DbSet<Employee> Employee { get; set; }
@@ -29,6 +31,7 @@ namespace E_commerce_Mvc_app.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
             });
+
 
             modelBuilder.Entity<Employee>(entity =>
             {
