@@ -1,5 +1,7 @@
-﻿using E_commerce_Mvc_app.Models;
+﻿using DB_Context.Models;
+using E_commerce_Mvc_app.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Data.Entity;
 using System.Diagnostics;
 
 namespace E_commerce_Mvc_app.Controllers
@@ -13,9 +15,17 @@ namespace E_commerce_Mvc_app.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public void Index()
         {
-            return View();
+            using (var context = new CompanyContext())
+            {
+                var dept = new Department()
+                {
+                    Name = "first Commitment"
+                };
+                context.Entry(dept).State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Added;
+                context.SaveChanges();
+            }
         }
 
         public IActionResult Privacy()
@@ -29,6 +39,9 @@ namespace E_commerce_Mvc_app.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-     
+
+       
+
+
     }
 }
