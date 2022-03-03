@@ -17,7 +17,7 @@ namespace E_commerce_Mvc_app.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
-        public MovieCategory MovieCategory { get; set; }
+        public MovieCategory MovieCategory { get; set; } /*Enumération*/
 
 
 

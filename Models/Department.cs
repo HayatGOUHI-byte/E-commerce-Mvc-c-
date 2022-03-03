@@ -10,7 +10,8 @@ namespace DB_Context.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
+        /*A collection of Employee that it contains*/
         public ICollection<Employee> Employee { get; set; }
-        public List<Employee> Employees { get; set; }
+       
     }
 }
