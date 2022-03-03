@@ -11,5 +11,6 @@ namespace DB_Context.Models
         public string Name { get; set; }
 
         public ICollection<Employee> Employee { get; set; }
+        public List<Employee> Employees { get; set; }
     }
 }
