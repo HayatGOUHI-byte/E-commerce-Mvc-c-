@@ -8,13 +8,17 @@ namespace E_commerce_Mvc_app.Controllers
 {
     public class HomeController : Controller
     {
+        /* attributes */
         private readonly ILogger<HomeController> _logger;
+
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
+
+        /*******Index method *******/
         public void Index()
         {
             using (var context = new CompanyContext())
@@ -27,6 +31,8 @@ namespace E_commerce_Mvc_app.Controllers
                 context.SaveChanges();
             }
         }
+
+
 
         public IActionResult Privacy()
         {
