@@ -10,29 +10,23 @@ namespace E_commerce_Mvc_app.Controllers
     {
         /* attributes */
         private readonly ILogger<HomeController> _logger;
-
+       
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+         
         }
-
 
         /*******Index method *******/
-        public void Index()
+        public string Index()
         {
-            using (var context = new CompanyContext())
-            {
-                var dept = new Department()
-                {
-                    Name = "first Commitment"
-                };
-                context.Entry(dept).State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Added;
-                context.SaveChanges();
-            }
+         
+      
+            
+
+            return "Record Interested";
         }
-
-
 
         public IActionResult Privacy()
         {
@@ -44,10 +38,6 @@ namespace E_commerce_Mvc_app.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-       
-
 
     }
 }

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using E_commerce_Mvc_app.Data;
 using E_commerce_Mvc_app.Models;
+using DB_Context.Models;
 
 namespace Rocky
 {
@@ -28,7 +29,7 @@ namespace Rocky
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //DbContextConfiguration
+        //DbContextConfiguration
             services.AddDbContext<CompanyContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllersWithViews();
@@ -44,7 +45,7 @@ namespace Rocky
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+         // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -62,7 +63,7 @@ namespace Rocky
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            AppDbInitializer.Seed(app);
+          /*  AppDbInitializer.Seed(app);*/
         }
     }
 }

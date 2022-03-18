@@ -19,17 +19,29 @@ namespace E_commerce_Mvc_app.Data
                     {
                         new Department()
                         {
-                            Name = "Genie informatique"
+                            DepartmentName= "genie mecanique"
                         },
                         new Department()
                         {
-                            Name = "Genie mecanique"
+                           DepartmentName= "genie informatique"
                         },
                         new Department()
                         {
-                            Name = "Genie economique"
+                            DepartmentName = "genie industriel"
+                        },
+                          new Department()
+                        {
+                            DepartmentName= "genie mathematiques"
+                        },
+                        new Department()
+                        {
+                           DepartmentName= "genie physique"
+                        },
+                        new Department()
+                        {
+                            DepartmentName = "genie chimie"
                         }
-                    });
+                    }) ;
                     context.SaveChanges();
                 }
 
